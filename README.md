@@ -1,2 +1,2 @@
 # Smart-Contact-Manager
-a simple one stop solution for maintaining all of your real state data
+A simple one stop solution for maintaining all of your real state records
