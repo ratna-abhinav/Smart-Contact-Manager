@@ -1,13 +1,32 @@
 package com.art.scm.controllers;
 
+import com.art.scm.forms.UserForm;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class HomeController {
 
-    @GetMapping("")
+    @GetMapping("/about")
     public String home() {
         return "about";
+    }
+
+    @GetMapping("/home")
+    public String home(Model model) {
+        return "home";
+    }
+
+    @GetMapping("/register")
+    public String register(Model model) {
+        UserForm userForm = new UserForm();
+        model.addAttribute("userForm", userForm);
+        return "register";
+    }
+
+    @GetMapping("/login")
+    public String login() {
+        return "login";
     }
 }
